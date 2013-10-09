@@ -69,5 +69,5 @@ $.ajax('url-goes-here',
 ###Hints:
 ####Make sure you get the right app id and REST API key (don't get confused with the Javascript key)
 ####If you're having a hard time populating the news items, use `console.log` to make sure you're getting data.
-####Also, use `console.log` to check the structure of the data
+####Also, use `console.log` to check the structure of the data. Make sure it looks like you expect it to look.
 
