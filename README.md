@@ -10,6 +10,7 @@ You'll be using your Parse.com API to retrieve (GET) stored newsfeed article.
 ###Step 1: Create some data
 You're going to use Postman to create some data in your API.
 * (if you already haven't) Create a parse.com free trial account
+* Create a new app
   * Use whatever name you'd like for your app name, you could call it "newsfeed"
 * Go to the dashboard, select your app, click the "Settings" button, then click on the "Application keys" tab on the left 
 * Make note of your Application ID your REST API Key (copy to a text file or leave the window open for later)
@@ -39,11 +40,10 @@ Again, the values are arbitrary. You could have chosen different values for "tit
 * Create as many news articles as you'd like
 
 ###Step 2: Retrieve your data
-You're now going to pull down those news articles you POSTed a moment ago.
+You're now going to pull down those news articles you POSTed a moment ago using jQuery and insert them into the DOM.
 
-In script.js, you're going to want to perform an AJAX request to get your newsfeed data. Instead of using the $.get method
-we used yesterday, we're going to need to use the $.ajax method, because we need to set the authentication headers and 
-$.get doesn't allow us to do that. Please review the syntax for a $.ajax request here: 
+In script.js, you're going to want to perform an AJAX request to get your newsfeed data. Use the [$.ajax method](http://api.jquery.com/jquery.ajax/), because we need to set the authentication headers and 
+$.get doesn't allow us to do that. Review the documentation to be sure you use the $.ajax method correctly.
 
 * Create a $.ajax request, setting the request headers inside of the `beforeSend` callback to the same heading/values you 
 used in Postman. 
