@@ -23,7 +23,7 @@ arbitrary, you can call the class whatever you'd like.
 
 ```javascript
 {
-  "title": "Some News Title"
+  "title": "Some News Title",
   "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla commodo massa magna, ut venenatis metus pulvinar ac. Maecenas condimentum, turpis vel tempus lacinia, nulla arcu mollis elit, eu porta tellus sem sit amet lorem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla vitae egestas mi. Vivamus a pulvinar neque. Donec at placerat ipsum. Maecenas faucibus orci at dapibus ultrices. Nam aliquet gravida consectetur. Nulla ornare dictum mollis. Nulla eu elementum libero. Etiam at enim sapien."
 }
 ```
