@@ -1,10 +1,45 @@
 $(document).ready(function() {
-	// Append a div with classname newsitem that contains an h1 with the title and a p containing the body
+	function generateElement(tag, innerHTML){
+		var element = document.createElement(tag);
+		if(innerHTML){
+			element.textContent = innerHTML;
+		}
+		return element;
+	}
+
 	function prepareHTMLFragment(newsitem){
+		//Append a div with classname newsitem that contains an h1 with the title and a p containing the body
+		
+		//Create a blank document fragment that is separate from the DOM
 		var documentFragment = document.createDocumentFragment();
-		var newsitemDiv = document.createElement("div");
+
+		//Create the newsitem div and add bootstrap styling
+		var newsitemDiv = generateElement("div");
 		$(newsitemDiv).addClass("newsitem");
-		$(newsitemDiv).html("<h1>" + newsitem.title + "</h1>" + "<p>" + newsitem.body + "</p>");
+		$(newsitemDiv).addClass("panel panel-default");
+		//   Add some flair
+		$(newsitemDiv).on("mouseenter", function(event){
+			$(this).removeClass("panel-default");
+			$(this).addClass("panel-primary");
+		});
+		$(newsitemDiv).on("mouseleave", function(event){
+			$(this).addClass("panel-default");
+			$(this).removeClass("panel-primary");
+		});
+
+		//Create the title element and add bootstrap styling
+		var titleElementDiv = generateElement("div");
+		var titleElement = generateElement("h1", newsitem.title);
+		$(titleElementDiv).addClass("panel-heading");
+		$(titleElement).addClass("panel-title");
+		titleElementDiv.appendChild(titleElement);
+		
+		//Create the body element and add bootstrap styling
+		var bodyElement = generateElement("p", newsitem.body);
+		$(bodyElement).addClass("panel-body text-left");
+
+		newsitemDiv.appendChild(titleElementDiv);
+		newsitemDiv.appendChild(bodyElement);
 		return documentFragment.appendChild(newsitemDiv);
 	}
 
