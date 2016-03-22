@@ -71,3 +71,7 @@ $.ajax('url-goes-here',
 ####If you're having a hard time populating the news items, use `console.log` to make sure you're getting data.
 ####Also, use `console.log` to check the structure of the data. Make sure it looks like you expect it to look.
 
+
+## Copyright
+
+© DevMountain LLC, 2016. Unauthorized use and/or duplication of this material without express and written permission from DevMountain, LLC is strictly prohibited. Excerpts and links may be used, provided that full and clear credit is given to DevMountain with appropriate and specific direction to the original content.
